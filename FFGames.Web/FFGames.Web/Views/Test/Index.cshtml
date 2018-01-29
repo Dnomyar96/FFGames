@@ -1,0 +1,11 @@
+﻿@model FFGames.Data.Models.User
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@Model.UserName; @Model.Password
+
+@Html.ActionLink("InserTest", "InsertTest")
