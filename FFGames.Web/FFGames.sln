@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Web", "FFGames.Web\FFGames.Web.csproj", "{CD8EBBDF-4BAD-46FB-986B-A295E1E0DDF8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Data", "FFGames.Data\FFGames.Data.csproj", "{C4097FDE-9F9E-4FB7-B6C8-748E9BEE8B3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Data.Models", "FFGames.Data.Models\FFGames.Data.Models.csproj", "{F7380EFA-0A4D-4E74-9C3A-EEFA7474813A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Data.Models", "FFGames.Data.Models\FFGames.Data.Models.csproj", "{AF507525-CCD1-4F04-A3B2-ED443062B121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Data", "FFGames.Data\FFGames.Data.csproj", "{25AF79BA-7CF1-4E10-8DDE-CBDB8ED751E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FFGames.Web", "FFGames.Web\FFGames.Web.csproj", "{7B154AA1-B5C2-415A-ABEA-2E7A6C0D5C77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD8EBBDF-4BAD-46FB-986B-A295E1E0DDF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD8EBBDF-4BAD-46FB-986B-A295E1E0DDF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD8EBBDF-4BAD-46FB-986B-A295E1E0DDF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD8EBBDF-4BAD-46FB-986B-A295E1E0DDF8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7380EFA-0A4D-4E74-9C3A-EEFA7474813A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7380EFA-0A4D-4E74-9C3A-EEFA7474813A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7380EFA-0A4D-4E74-9C3A-EEFA7474813A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7380EFA-0A4D-4E74-9C3A-EEFA7474813A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{25AF79BA-7CF1-4E10-8DDE-CBDB8ED751E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{25AF79BA-7CF1-4E10-8DDE-CBDB8ED751E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{25AF79BA-7CF1-4E10-8DDE-CBDB8ED751E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{25AF79BA-7CF1-4E10-8DDE-CBDB8ED751E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4097FDE-9F9E-4FB7-B6C8-748E9BEE8B3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4097FDE-9F9E-4FB7-B6C8-748E9BEE8B3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4097FDE-9F9E-4FB7-B6C8-748E9BEE8B3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4097FDE-9F9E-4FB7-B6C8-748E9BEE8B3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF507525-CCD1-4F04-A3B2-ED443062B121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF507525-CCD1-4F04-A3B2-ED443062B121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF507525-CCD1-4F04-A3B2-ED443062B121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF507525-CCD1-4F04-A3B2-ED443062B121}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B154AA1-B5C2-415A-ABEA-2E7A6C0D5C77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B154AA1-B5C2-415A-ABEA-2E7A6C0D5C77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B154AA1-B5C2-415A-ABEA-2E7A6C0D5C77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B154AA1-B5C2-415A-ABEA-2E7A6C0D5C77}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
