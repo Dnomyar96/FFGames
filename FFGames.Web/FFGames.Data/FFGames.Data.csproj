@@ -69,6 +69,10 @@
     <Compile Include="Migrations\201801291215036_Initial.Designer.cs">
       <DependentUpon>201801291215036_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201801311150154_RegisterTokens.cs" />
+    <Compile Include="Migrations\201801311150154_RegisterTokens.Designer.cs">
+      <DependentUpon>201801311150154_RegisterTokens.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -85,6 +89,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801291215036_Initial.resx">
       <DependentUpon>201801291215036_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201801311150154_RegisterTokens.resx">
+      <DependentUpon>201801311150154_RegisterTokens.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

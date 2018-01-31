@@ -24,6 +24,26 @@
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    @if (HttpContext.Current.Session["currentUser"] == null)
+                    {
+                        <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    }
+                    else
+                    {
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                @(((FFGames.Web.Helpers.UserHelper)HttpContext.Current.Session["currentUser"]).UserName)
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                                <li>@Html.ActionLink("About", "About", "Home")</li>
+                            </ul>
+                        </li>
+                        <li>@Html.ActionLink("Logout", "Logout", "Login")</li>
+                    }
+                </ul>
             </div>
         </div>
     </div>

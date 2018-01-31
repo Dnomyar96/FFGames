@@ -6,19 +6,18 @@ using System.Threading.Tasks;
 
 namespace FFGames.Data.Models
 {
-    public class Session
+    public class RegisterToken
     {
-        public Session()
+        public RegisterToken()
         {
-            GameSessions = new List<GameSession>();
             Users = new List<User>();
         }
 
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string Token { get; set; }
 
-        public virtual ICollection<GameSession> GameSessions { get; set; }
+        public int AmountAllowed { get; set; }
 
         public virtual ICollection<User> Users { get; set; }
     }

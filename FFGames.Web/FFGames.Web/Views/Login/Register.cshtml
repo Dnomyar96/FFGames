@@ -1,0 +1,47 @@
+﻿@model FFGames.Web.Models.Login.RegisterVM
+
+<div class="row">
+    <h1 class="col-lg-5">Register</h1>
+</div>
+
+@using (Html.BeginForm("RegisterUser", "Login"))
+{
+    <div class="row">
+        <div class="col-lg-6">@Html.ValidationSummary()</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Register token</div>
+        <div class="col-lg-6">@Html.EditorFor(m => m.RegisterToken)</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Username</div>
+        <div class="col-lg-6">@Html.EditorFor(m => m.UserName)</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Password</div>
+        <div class="col-lg-6">@Html.PasswordFor(m => m.Password)</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Confirm password</div>
+        <div class="col-lg-6">@Html.PasswordFor(m => m.PasswordConfirm)</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-5">
+            <input type="submit" value="Register" />
+        </div>
+    </div>
+}
+
+<style>
+    input {
+        margin-bottom: 5px;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    .validation-summary-errors {
+        color: red;
+    }
+</style>

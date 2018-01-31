@@ -8,6 +8,11 @@ namespace FFGames.Data.Models
 {
     public class User
     {
+        public User()
+        {
+            Sessions = new List<Session>();
+        }
+
         public int Id { get; set; }
 
         public string UserName { get; set; }
@@ -15,5 +20,7 @@ namespace FFGames.Data.Models
         public string Password { get; set; }
 
         public virtual ICollection<Session> Sessions { get; set; }
+
+        public virtual RegisterToken RegisterToken { get; set; }
     }
 }
