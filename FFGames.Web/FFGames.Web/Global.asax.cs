@@ -1,5 +1,8 @@
-﻿using System;
+﻿using FFGames.Data;
+using FFGames.Data.Migrations;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -16,6 +19,7 @@ namespace FFGames.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<GameContext, Configuration>());
         }
     }
 }
