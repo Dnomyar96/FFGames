@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FFGames.Data;
+using FFGames.Web.Helpers;
+using FFGames.Web.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,21 +13,21 @@ namespace FFGames.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View();
-        }
+            using (var context = new GameContext())
+            {
+                var model = new HomeVM();
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
+                model.Sessions = context.Sessions.ToList().Select(s => new SessionVM
+                {
+                    Id = s.Id,
+                    Name = s.Name,
+                    Participants = s.Users.Count,
+                    GamesAmount = s.GameSessions.Count,
+                    UserIsInSession = s.Users.Contains(UserHelper.GetCurrentDbUser(context))
+                }).ToList();
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+                return View(model);
+            }
         }
     }
 }

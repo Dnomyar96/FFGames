@@ -19,6 +19,8 @@ namespace FFGames.Data.Models
 
         public string Password { get; set; }
 
+        public bool IsAdmin { get; set; }
+
         public virtual ICollection<Session> Sessions { get; set; }
 
         public virtual RegisterToken RegisterToken { get; set; }

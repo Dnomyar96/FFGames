@@ -13,6 +13,8 @@ namespace FFGames.Web.Helpers
 
         public string UserName { get; set; }
 
+        public bool IsAdmin { get; set; }
+
         public const string CURRENTUSER = "currentUser";
 
         public static void SetCurrentUser(User user)
@@ -20,7 +22,8 @@ namespace FFGames.Web.Helpers
             HttpContext.Current.Session[CURRENTUSER] = new UserHelper
             {
                 Id = user.Id,
-                UserName = user.UserName
+                UserName = user.UserName,
+                IsAdmin = user.IsAdmin
             };
         }
 

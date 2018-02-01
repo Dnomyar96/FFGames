@@ -73,6 +73,14 @@
     <Compile Include="Migrations\201801311150154_RegisterTokens.Designer.cs">
       <DependentUpon>201801311150154_RegisterTokens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802011159392_UserAdmin.cs" />
+    <Compile Include="Migrations\201802011159392_UserAdmin.Designer.cs">
+      <DependentUpon>201802011159392_UserAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802011210120_SessionsUpdate.cs" />
+    <Compile Include="Migrations\201802011210120_SessionsUpdate.Designer.cs">
+      <DependentUpon>201802011210120_SessionsUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -92,6 +100,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201801311150154_RegisterTokens.resx">
       <DependentUpon>201801311150154_RegisterTokens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802011159392_UserAdmin.resx">
+      <DependentUpon>201802011159392_UserAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802011210120_SessionsUpdate.resx">
+      <DependentUpon>201802011210120_SessionsUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

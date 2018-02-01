@@ -18,6 +18,10 @@ namespace FFGames.Data.Models
 
         public string Name { get; set; }
 
+        public int CreatedBy { get; set; }
+
+        public DateTime DateCreated { get; set; }
+
         public virtual ICollection<GameSession> GameSessions { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

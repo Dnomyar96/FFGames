@@ -1,0 +1,14 @@
+﻿@model FFGames.Web.Models.Session.SessionVM
+
+@{
+    ViewBag.Title = "CreateSession";
+}
+
+<h2>Create Session</h2>
+
+@using (Html.BeginForm("SaveSession", "Session"))
+{
+    <div class="row">Name</div>
+    <div class="row">@Html.EditorFor(m => m.Name)</div>
+    <div class="row"><input type="submit" value="Create session" /></div>
+}
