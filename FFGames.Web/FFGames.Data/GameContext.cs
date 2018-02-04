@@ -18,5 +18,6 @@ namespace FFGames.Data
         public DbSet<Session> Sessions { get; set; }
         public DbSet<GameSession> GameSessions { get; set; }
         public DbSet<RegisterToken> RegisterTokens { get; set; }
+        public DbSet<Team> Teams { get; set; }
     }
 }

@@ -1,0 +1,69 @@
+﻿@model FFGames.Web.Models.Session.SessionVM
+
+@{
+    ViewBag.Title = "Session";
+}
+
+<div class="row">
+    <h2>@Model.Name</h2>
+</div>
+
+<div class="row">
+    <div class="col-lg-5">
+        <div class="row"><strong>Participants</strong></div>
+        @foreach (var user in Model.Users)
+        {
+            <div class="row">@user</div>
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-2" style="padding-left: 0">
+        <div id="add-game-button">Add game</div>
+    </div>
+</div>
+<div class="row">
+    @foreach(var game in Model.Games)
+    {
+        <div class="col-lg-2" style="padding-left: 0">
+            <div class="panel panel-primary">
+                <div id="panel-heading-@game.Id" class="panel-heading">@game.Name</div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-8">Participants:</div>
+                        <div class="col-lg-3">@game.PlayerCount</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">Team size:</div>
+                        <div class="col-lg-3">@game.TeamSize</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">Teams:</div>
+                        <div class="col-lg-3">@game.TeamCount</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<script>
+    $('#add-game-button').click(function () {
+        window.location = '@Url.Action("AddGame", "Games", new { sessionId = Model.Id })';
+    });
+</script>
+
+<style>
+    #add-game-button {
+        padding: 10px;
+        color: white;
+        background-color: dimgray;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    #add-game-button:hover {
+        background-color: gray;
+    }
+</style>

@@ -68,6 +68,7 @@
     <Compile Include="RegisterToken.cs" />
     <Compile Include="Session.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Team.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

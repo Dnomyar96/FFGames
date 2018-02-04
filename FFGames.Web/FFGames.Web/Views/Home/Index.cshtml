@@ -5,9 +5,9 @@
 <div class="row">
     @foreach (var session in Model.Sessions)
     {
-        <div class="col-lg-2 box">
+        <div class="col-lg-2">
             <div class="panel panel-primary">
-                <div class="panel-heading">@session.Name</div>
+                <div id="panel-heading-@session.Id" class="panel-heading">@session.Name</div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-8">Participants:</div>
@@ -28,6 +28,22 @@
                 }
             </div>
         </div>
+
+        if (session.UserIsInSession)
+        {
+            <script>
+                $('#panel-heading-@(session.Id)').click(function () {
+                    window.location = '@Url.Action("Session", "Session", new { id = session.Id })';
+                });
+            </script>
+
+            <style>
+                #panel-heading-@(session.Id):hover {
+                    cursor: pointer;
+                    background-color: blue !important;
+                }
+            </style>
+        }
     }
 </div>
 

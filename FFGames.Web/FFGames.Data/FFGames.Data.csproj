@@ -81,6 +81,14 @@
     <Compile Include="Migrations\201802011210120_SessionsUpdate.Designer.cs">
       <DependentUpon>201802011210120_SessionsUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802041236215_GameSessionUser.cs" />
+    <Compile Include="Migrations\201802041236215_GameSessionUser.Designer.cs">
+      <DependentUpon>201802041236215_GameSessionUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802041303393_Teams.cs" />
+    <Compile Include="Migrations\201802041303393_Teams.Designer.cs">
+      <DependentUpon>201802041303393_Teams.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -106,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802011210120_SessionsUpdate.resx">
       <DependentUpon>201802011210120_SessionsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802041236215_GameSessionUser.resx">
+      <DependentUpon>201802041236215_GameSessionUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802041303393_Teams.resx">
+      <DependentUpon>201802041303393_Teams.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

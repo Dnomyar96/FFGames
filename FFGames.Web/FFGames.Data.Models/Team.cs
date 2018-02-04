@@ -6,26 +6,19 @@ using System.Threading.Tasks;
 
 namespace FFGames.Data.Models
 {
-    public class GameSession
+    public class Team
     {
-        public GameSession()
+        public Team()
         {
             Users = new List<User>();
-            Teams = new List<Team>();
         }
 
         public int Id { get; set; }
 
         public string Name { get; set; }
 
-        public int TeamSize { get; set; }
-
-        public int TeamAmount { get; set; }
-
-        public virtual Session Session { get; set; }
+        public virtual GameSession GameSession { get; set; }
 
         public virtual ICollection<User> Users { get; set; }
-
-        public virtual ICollection<Team> Teams { get; set; }
     }
 }

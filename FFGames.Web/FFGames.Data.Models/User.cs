@@ -11,6 +11,7 @@ namespace FFGames.Data.Models
         public User()
         {
             Sessions = new List<Session>();
+            GameSessions = new List<GameSession>();
         }
 
         public int Id { get; set; }
@@ -22,6 +23,10 @@ namespace FFGames.Data.Models
         public bool IsAdmin { get; set; }
 
         public virtual ICollection<Session> Sessions { get; set; }
+
+        public virtual ICollection<GameSession> GameSessions { get; set; }
+
+        public virtual ICollection<Team> Teams { get; set; }
 
         public virtual RegisterToken RegisterToken { get; set; }
     }

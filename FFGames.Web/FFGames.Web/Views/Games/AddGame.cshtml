@@ -1,0 +1,53 @@
+﻿@model FFGames.Web.Models.Games.GameVM
+
+@{
+    ViewBag.Title = "AddGame";
+}
+
+<div class="row">
+    <div class="col-lg-5">
+        <h2>@Model.SessionName</h2>
+    </div>
+</div>
+
+@using (Html.BeginForm("SaveGame", "Games"))
+{
+    @Html.HiddenFor(m => m.SessionId)
+    @Html.HiddenFor(m => m.SessionName)
+    <div class="row">
+        <div class="col-lg-6">@Html.ValidationSummary()</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Name</div>
+        <div class="col-lg-2">@Html.EditorFor(m => m.Name)</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Team size</div>
+        <div class="col-lg-2">@Html.EditorFor(m => m.TeamSize)</div>
+        <div class="col-lg-4">*Set to 0 to use amount of teams to calculate team size</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">Amount of teams</div>
+        <div class="col-lg-2">@Html.EditorFor(m => m.TeamAmount)</div>
+        <div class="col-lg-4">*Set to 0 to use team size to calculate amount of teams</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+            <input type="submit" value="Add game" />
+        </div>
+    </div>
+}
+
+<style>
+    input {
+        margin-bottom: 5px;
+    }
+
+    .error-message {
+        color: red;
+    }
+
+    .validation-summary-errors {
+        color: red;
+    }
+</style>

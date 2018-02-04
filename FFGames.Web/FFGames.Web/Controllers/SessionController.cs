@@ -36,6 +36,35 @@ namespace FFGames.Web.Controllers
             }
         }
 
+        public ActionResult Session(int id)
+        {
+            using(var context = new GameContext())
+            {
+                var session = context.Sessions.SingleOrDefault(s => s.Id == id);
+
+                if (session == null)
+                    return HttpNotFound();
+
+                var model = new SessionVM
+                {
+                    Id = session.Id,
+                    Name = session.Name,
+                    Games = session.GameSessions.Select(g => new GameVM
+                    {
+                        Name = g.Name,
+                        PlayerCount = g.Users.Count,
+                        TeamCount = g.Teams.Count,
+                        TeamSize = g.TeamSize,
+                        HasTournament = false,
+                        TournamentHasStarted = false
+                    }).ToList(),
+                    Users = session.Users.Select(u => u.UserName)
+                };
+
+                return View(model);
+            }
+        }
+
         public ActionResult EnterSession(int id)
         {
             using (var context = new GameContext())
