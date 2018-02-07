@@ -51,10 +51,12 @@ namespace FFGames.Web.Controllers
                     Name = session.Name,
                     Games = session.GameSessions.Select(g => new GameVM
                     {
+                        Id = g.Id,
                         Name = g.Name,
                         PlayerCount = g.Users.Count,
                         TeamCount = g.Teams.Count,
                         TeamSize = g.TeamSize,
+                        UserIsInGame = g.Users.Contains(UserHelper.GetCurrentDbUser(context)),
                         HasTournament = false,
                         TournamentHasStarted = false
                     }).ToList(),

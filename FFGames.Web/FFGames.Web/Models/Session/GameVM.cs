@@ -19,6 +19,8 @@ namespace FFGames.Web.Models.Session
 
         public int TeamCount { get; set; }
 
+        public bool UserIsInGame { get; set; }
+
         public bool HasTournament { get; set; }
 
         public bool TournamentHasStarted { get; set; }

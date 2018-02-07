@@ -173,7 +173,9 @@
     </Compile>
     <Compile Include="Helpers\HashHelper.cs" />
     <Compile Include="Helpers\UserHelper.cs" />
+    <Compile Include="Models\Games\GameDetailsVM.cs" />
     <Compile Include="Models\Games\GameVM.cs" />
+    <Compile Include="Models\Games\TeamVM.cs" />
     <Compile Include="Models\Home\HomeVM.cs" />
     <Compile Include="Models\Home\SessionVM.cs" />
     <Compile Include="Models\Login\LoginVM.cs" />
@@ -226,6 +228,7 @@
     <Content Include="Views\Session\CreateSession.cshtml" />
     <Content Include="Views\Session\Session.cshtml" />
     <Content Include="Views\Games\AddGame.cshtml" />
+    <Content Include="Views\Games\Game.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

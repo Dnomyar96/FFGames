@@ -42,8 +42,32 @@
                         <div class="col-lg-3">@game.TeamCount</div>
                     </div>
                 </div>
+                @if (game.UserIsInGame)
+                {
+                    <a href="@Url.Action("LeaveGame", "Games", new { id = game.Id })"><div class="panel-heading panel-button panel-button-leave">Leave game</div></a>
+                }
+                else
+                {
+                    <a href="@Url.Action("EnterGame", "Games", new { id = game.Id })"><div class="panel-heading panel-button panel-button-enter">Enter game</div></a>
+                }
             </div>
         </div>
+
+        if (game.UserIsInGame)
+        {
+            <script>
+                $('#panel-heading-@(game.Id)').click(function () {
+                    window.location = '@Url.Action("Game", "Games", new { id = game.Id })';
+                });
+            </script>
+
+            <style>
+                #panel-heading-@(game.Id):hover {
+                    cursor: pointer;
+                    background-color: blue !important;
+                }
+            </style>
+        }
     }
 </div>
 
@@ -65,5 +89,35 @@
 
     #add-game-button:hover {
         background-color: gray;
+    }
+
+    .panel-button {
+        border-radius: 3px;
+        margin: 5px;
+        color: white !important;
+    }
+
+        .panel-button:hover {
+            cursor: pointer;
+        }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .panel-button-enter {
+        background-color: green !important;
+    }
+
+        .panel-button-enter:hover {
+            background-color: darkcyan !important;
+        }
+
+    .panel-button-leave {
+        background-color: darkred !important;
+    }
+
+    .panel-button-leave:hover {
+        background-color: orangered !important;
     }
 </style>

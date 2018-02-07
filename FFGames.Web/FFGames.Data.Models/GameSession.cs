@@ -22,6 +22,8 @@ namespace FFGames.Data.Models
 
         public int TeamAmount { get; set; }
 
+        public int CreatedById { get; set; }
+
         public virtual Session Session { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

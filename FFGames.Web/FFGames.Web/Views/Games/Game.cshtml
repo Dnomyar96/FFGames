@@ -1,0 +1,101 @@
+﻿@model FFGames.Web.Models.Games.GameDetailsVM
+
+@{
+    ViewBag.Title = "Game";
+}
+
+<div class="row">
+    <h2>@Model.Name</h2>
+</div>
+
+@if (Model.CanEditGame)
+{
+    <div class="row">
+        <div class="col-lg-2" style="padding-left: 0">
+            <div id="generate-teams-button">Generate teams</div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-lg-2">
+        <div class="row"><strong>Participants</strong></div>
+        @foreach (var user in Model.Participants)
+        {
+            <div class="row">@user</div>
+        }
+    </div>
+</div>
+
+@if (Model.Teams.Count() > 0)
+{
+    <div class="row">
+        @foreach (var team in Model.Teams)
+        {
+            <div class="col-lg-2" style="padding-left: 0">
+                <div class="panel panel-primary">
+                    <div id="panel-heading" class="panel-heading">@team.Name</div>
+                    <div class="panel-body">
+                        @foreach (var user in team.Members)
+                        {
+                            <div class="row">
+                                <div class="col-lg-12">@user</div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+<script>
+    $('#generate-teams-button').click(function () {
+        window.location = '@Url.Action("GenerateTeams", "Games", new { id = Model.Id })';
+    });
+</script>
+
+<style>
+    #generate-teams-button {
+        padding: 10px;
+        color: white;
+        background-color: dimgray;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    #generate-teams-button:hover {
+        background-color: gray;
+    }
+
+    .panel-button {
+        border-radius: 3px;
+        margin: 5px;
+        color: white !important;
+    }
+
+        .panel-button:hover {
+            cursor: pointer;
+        }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .panel-button-enter {
+        background-color: green !important;
+    }
+
+        .panel-button-enter:hover {
+            background-color: darkcyan !important;
+        }
+
+    .panel-button-leave {
+        background-color: darkred !important;
+    }
+
+    .panel-button-leave:hover {
+        background-color: orangered !important;
+    }
+</style>
